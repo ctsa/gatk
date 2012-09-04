@@ -46,7 +46,7 @@ public class DepthPerAlleleBySample extends GenotypeAnnotation implements Standa
         if ( g == null || !g.isCalled() )
             return;
 
-        if ( vc.isSNP() )
+        if ( vc.isPointEvent() )
             annotateSNP(stratifiedContext, vc, gb);
         else if ( vc.isIndel() )
             annotateIndel(stratifiedContext, ref.getBase(), vc, gb);
